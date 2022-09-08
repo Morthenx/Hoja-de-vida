@@ -1,0 +1,212 @@
+:root {
+    --Titulo: black;
+    --Subtitulo: #a74300;
+    --TituloCard: #964401;
+    --skin: #d4a77e;
+    --enfasis:darkorange;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/* header */
+.header {
+    display: flex;
+    justify-items: stretch;
+    background-color: #F29549;
+    height: 10%;
+    border-bottom: 1px solid var(--Subtitulo);
+}
+.header__foto{
+    display: flex;
+    place-items: center;
+}
+.header__foto--adorno{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-self: end;
+}
+.header__foto--circulo {
+    border: 4px solid var(--Subtitulo);
+    border-radius: 100%;
+    width: 10.0rem;
+    height: 10.0rem;
+}
+.header__titulo{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nuosu SIL', serif;
+    color: var(--Titulo);
+    text-align: center;
+    width: 90%;
+}
+.header__titulo--grande{
+    font-size: 3.5rem;
+}
+.header__nav{
+    display: none;
+}
+/* main */
+.subtitulo {
+    color: var(--Subtitulo);
+    font-family: 'Nuosu SIL', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    place-self: center;
+    grid-area: subtitulo;
+}
+/* Aside */
+.Aside{
+    background-color: var(--skin);
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+.Aside__Info_Personal{
+    width: 92%;
+}
+.Aside__Info_Personal p{
+    text-align: justify;
+}
+.Aside__Info_Personal p span {
+    color: var(--enfasis);
+    text-shadow: 0.3px 0.3px 3px black;
+}
+.Aside__Competencias{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 92%));
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "subtitulo subtitulo";
+    width: 80%;
+    text-align: center;
+    list-style: none;
+}
+.Aside__Tecnologias, .Aside__Herramientas{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "subtitulo subtitulo subtitulo";
+}
+.Aside--Tag{
+    display: grid;
+    grid-template-columns: 30px auto;
+    grid-template-rows: 30px;
+    place-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 3px;
+    border-radius: 2px;
+    box-shadow: -2px 1px 8px -2px black;
+}
+.Aside--Tag img{
+    height: 80%;
+    padding-right: 3px;
+}
+.Aside--Tag p, .Intereses--tag p{
+    margin-bottom: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Tag_HTML{
+    background-color: rgb(255, 102, 0);
+}
+.Tag_CSS{
+    background-color: rgb(0, 174, 255);
+}
+.Tag_JS{
+    background-color: rgb(255, 208, 0);
+}
+.Tag_BT{
+    background-color: rgb(72, 52, 99);
+    color: white;
+}
+.Tag_VSC{
+    background-color: rgb(103, 209, 241);
+}
+.Tag_FIGMA{
+    background-color: black;
+    color: white;
+}
+.Aside__Intereses{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "subtitulo";
+    place-items: center;
+}
+.Intereses--tag{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    margin: 5px;
+}
+.Intereses--tag img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+    filter: drop-shadow(1px 1px 2px black);
+}
+/* article */
+.Article{
+    display: flex;
+    flex-direction: column;
+}
+.Article__section--card{
+    background-color: #eeeeee;
+    text-align: start;
+    font-weight: bold;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+}
+.card--name{
+    color: var(--TituloCard);
+    font-size: 2rem;
+}
+.card--time{
+    color: var(--skin);
+    font-size: 1.3rem;
+}
+.card--aprendido{
+    color:  var(--TituloCard);
+    font-size: 1.3rem;
+}
+/* footer */
+.footer{
+    background-color: var(--skin);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+.footer__left{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.footer__left p{
+    place-self: center;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+.left__items{
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+    place-items: center;
+    margin: 5px;
+}
+.left__items--image{
+    width: 2rem;
+    height: 2rem;
+}
+.footer__right{
+    place-self: center;
+    margin: 2rem;
+}
